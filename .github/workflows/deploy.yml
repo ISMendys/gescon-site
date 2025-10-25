@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+# Adiciona as permissões necessárias para o deploy
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -21,10 +25,12 @@ jobs:
         run: npm install
 
       - name: Build static site
-        # O Next.js precisa de 'next build' e 'next export' para sites estáticos.
-        # Configure seu package.json para que 'npm run build' faça isso.
-        # Ex: "build": "next build && next export"
+        # Garanta que seu package.json tenha: "build": "next build && next export"
         run: npm run build
+
+      # NOVO PASSO PARA DEBUG: Lista os arquivos após o build
+      - name: List build output
+        run: ls -R
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
