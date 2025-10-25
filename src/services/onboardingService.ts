@@ -42,7 +42,7 @@ export const onboardingService = {
   },
 
   /**
-   * Verifica se um email já está cadastrado
+   *  Verifica se um email já está cadastrado
    */
   async checkEmailAvailability(email: string): Promise<boolean> {
     const response = await axios.get<{ available: boolean }>(
