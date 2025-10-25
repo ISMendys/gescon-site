@@ -26,6 +26,8 @@ jobs:
 
       - name: Build static site
         # Garanta que seu package.json tenha: "build": "next build && next export"
+        env:
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
         run: npm run build
 
       # NOVO PASSO PARA DEBUG: Lista os arquivos após o build
