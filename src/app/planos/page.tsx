@@ -125,7 +125,7 @@ export default function PlanosPage() {
                   },
                   {
                     feature: 'Boletos Automáticos (Asaas)',
-                    free: false,
+                    free: true,
                     pro: true,
                     premium: true,
                   },
