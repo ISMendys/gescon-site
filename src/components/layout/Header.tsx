@@ -41,7 +41,7 @@ export function Header() {
           </div>
 
           {/* CTA Buttons */}
-          <div class="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost" size="sm" asChild>
               <Link href="http://app-gescon.istech.tech">
                 Login
@@ -85,7 +85,7 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <div class="pt-4 space-y-2">
+            <div className="pt-4 space-y-2">
               <Button variant="outline" className="w-full" asChild>
                 <Link href="http://app-gescon.istech.tech">
                   Login

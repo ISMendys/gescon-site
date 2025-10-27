@@ -15,6 +15,7 @@ import {
   Bell,
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AppsPage() {
   return (
@@ -88,23 +89,13 @@ export default function AppsPage() {
             </FadeIn>
 
             <FadeIn delay={200} className="relative">
-              <Card className="border-0 shadow-2xl bg-gradient-to-br from-blue-500 to-cyan-500 p-8">
-                <div className="bg-white rounded-xl p-6">
-                  <div className="text-center space-y-4">
-                    <Smartphone className="w-16 h-16 mx-auto text-blue-500" />
-                    <div className="space-y-2">
-                      <div className="h-4 bg-gray-200 rounded w-3/4 mx-auto" />
-                      <div className="h-4 bg-gray-200 rounded w-1/2 mx-auto" />
-                    </div>
-                    <div className="grid grid-cols-2 gap-3 pt-4">
-                      <div className="h-20 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-lg" />
-                      <div className="h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg" />
-                      <div className="h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg" />
-                      <div className="h-20 bg-gradient-to-br from-orange-100 to-red-100 rounded-lg" />
-                    </div>
-                  </div>
-                </div>
-              </Card>
+              <Image
+                src="/mobile-apresentation.png"
+                alt="Gescon mobile app"
+                width={3600}
+                height={7200}
+                className="mx-auto"
+              />
             </FadeIn>
           </div>
         </div>

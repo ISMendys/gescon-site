@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const proofPoints = [
   'Grátis até 50 unidades',
@@ -92,30 +93,13 @@ export function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {/* Placeholder for screenshot/mockup */}
-            <div className="relative bg-gradient-to-br from-[#1a1a2e] to-[#2d2d44] rounded-2xl shadow-2xl p-8 overflow-hidden">
-              {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#e94560] rounded-full blur-3xl opacity-20" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#ff5571] rounded-full blur-3xl opacity-20" />
-
-              {/* Mock dashboard preview */}
-              <div className="relative bg-white rounded-lg p-6 shadow-xl">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
-                </div>
-                <div className="space-y-3">
-                  <div className="h-4 bg-gray-200 rounded w-3/4 animate-pulse" />
-                  <div className="h-4 bg-gray-200 rounded w-1/2 animate-pulse" />
-                  <div className="grid grid-cols-2 gap-3 mt-6">
-                    <div className="h-20 bg-gradient-to-br from-[#e94560]/20 to-[#ff5571]/20 rounded-lg" />
-                    <div className="h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg" />
-                  </div>
-                  <div className="h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg mt-4" />
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/main-image.png"
+              alt="Gescon dashboard"
+              width={4000}
+              height={2250}
+              className="rounded-2xl shadow-2xl"
+            />
 
             {/* Floating badges */}
             <motion.div
